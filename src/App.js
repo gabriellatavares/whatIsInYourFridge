@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import { v4 as uuidv4 } from 'uuid'
+import image from './images/burgundy-20.png'
 import './App.css';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('broccoli')
+  const [query, setQuery] = useState('')
 
   useEffect( ()=> {
     getRecipes();
@@ -34,14 +35,22 @@ function App() {
  
   return (
     <div className="App">
+      <div className="landingPage">
+        <div>
+          <h3>Cook some <span>delicious recipes </span>with what you have at home!</h3>
+        <p>Are you a foodie? What's in your fridge will help you find the perfect recipe for you. This is your online cookbook.</p>
+      </div>
+      <img src={image} alt="" className="firstPage" />
+      </div>
      <form onSubmit={getSearch} className="search-form">
-       <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+       <input className="search-bar" type="text" value={search} placeholder="What's in your fridge?" onChange={updateSearch}/>
        <button className="search-button" type="submit"> Search </button>
      </form>
     <div className="recipes">
       {recipes.map(recipe => (
         <Recipe
             key={uuidv4()} 
+            totalTime={recipe.recipe.totalTime}
             title={recipe.recipe.label} 
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}

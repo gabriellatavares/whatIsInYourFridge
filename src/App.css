@@ -1,6 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&display=swap');
+
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  background-color: #FFF4F4;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.landingPage {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+
+span {
+  color: #F54748;
+}
+#root > div > div.landingPage > div > p {
+  color: #707070;
+  font-size: 100%;
+}
+
+#root > div > div.landingPage > div > h3 {
+  font-size: 4vw;
+  color: #2f1808;
+
+}
+.firstPage {
+  width: 40%;
+  height: 100%;
 }
 
 .search-form{
@@ -17,14 +44,45 @@
 }
 
 .search-button{
-  background: lightcoral;
+  background: #F54748;
   border: none;
+  border-radius: 18%;
   padding: 10px 20px;
   color: white;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bolder;
 }
 
 .recipes {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  justify-items: center;
+  justify-content: center;
+}
+
+.itemRecipe {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 10%;
+  cursor: pointer;
+  width: 80%;
+  color: #707070;
+  
+}
+
+.imgRecipes {
+  width:  50%;
+	object-fit: cover;
+  border-radius: 5%;
+}
+
+h4 {
+  color: #2f1808;
+}
+
+h4:hover {
+  color: #F54748;
 }
