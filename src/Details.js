@@ -1,7 +1,7 @@
 //O que falta fazer: 
-//- Adicionar a opção de favoritar receita
-//- Clicar na receita e mostrar mais detalhes
-//- header e footer
+//- Adicionar a opção de favoritar receita por localStorage
+//- footer
+//- links da navbar
 
 // <ul>Ingredients: 
 //         {ingredients.map( ingredient => (

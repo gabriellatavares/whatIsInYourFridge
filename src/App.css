@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&display=swap');
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
 .App {
   min-height: 100vh;
   background-color: #FFF4F4;
@@ -71,6 +78,10 @@ span {
   width: 80%;
   color: #707070;
   
+}
+.itemRecipe:hover {
+  box-shadow: 0.25em 0.25em 0.50em rgba(0, 0, 0, .15),
+              0.125em 0.125em 0.12em rgba(0, 0, 0, .5);
 }
 
 .imgRecipes {

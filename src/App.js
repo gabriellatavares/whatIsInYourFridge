@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Recipe from './Recipe';
+import Navbar from './Navbar'
 import { v4 as uuidv4 } from 'uuid'
 import image from './images/burgundy-20.png'
 import './App.css';
@@ -35,6 +36,7 @@ function App() {
  
   return (
     <div className="App">
+      <Navbar />
       <div className="landingPage">
         <div>
           <h3>Cook some <span>delicious recipes </span>with what you have at home!</h3>
