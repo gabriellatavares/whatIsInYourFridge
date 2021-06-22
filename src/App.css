@@ -7,7 +7,7 @@ header {
   padding-left: 5%;
 }
 
-.App {
+body {
   min-height: 100vh;
   background-color: #FFF4F4;
   font-family: 'Catamaran', sans-serif;
