@@ -1,35 +1,34 @@
 //O que falta fazer: 
-//- Adicionar a opção de favoritar receita por localStorage (toda a lógica, add e deletar. não deixar repetir també )
-//- página dos favoritos
+//- fix error when I refresh the detail page 
+//- CSS da página de detalhes da receita e dos favoritos
 //- footer
 
 import AddFavorite from './AddFavorite'
 import { v4 as uuidv4 } from 'uuid'
        
 const Details = (props) => {
-  console.log("about", props.location.aboutProps)
   const recipe = props.location.aboutProps;
 
   return (
     <>
+    {recipe.name}
     <ul>Ingredients: 
          { recipe.ingredients.map( ingredient => (
            <li key={uuidv4()}>{ingredient.text}</li>
          ))}
        </ul>
        <p>{Math.round(recipe.calories)} calories</p>
-       <img src={recipe.image} alt={recipe.title} className="imgRecipes" />
+       <img src={recipe.image} alt={recipe.name} className="imgRecipes" />
 
        <a href={recipe.sourceRecipe} target="_blank" rel="noopener noreferrer">
            Interested? Click this link and check the recipe from the original source.
        </a>
        <AddFavorite
-        name = {recipe.title}
+        name = {recipe.name}
         calories = {recipe.calories}
         image = {recipe.image}
         ingredients = {recipe.ingredients}
-        sourceRecipe = {recipe.sourceRecipe}
-     />
+        sourceRecipe = {recipe.sourceRecipe}/>
        
     </>
     
