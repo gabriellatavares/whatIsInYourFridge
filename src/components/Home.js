@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import { v4 as uuidv4 } from 'uuid'
-import image from './images/burgundy-20.png'
-import './App.css';
+import image from '../images/burgundy-20.png'
+import '../App.css';
 
 function Home() {
 

@@ -1,7 +1,7 @@
-import Navbar from './Navbar'
-import Home from './Home'
-import Favorites from './Favorites'
-import Details from './Details'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Favorites from './components/Favorites'
+import Details from './components/Details'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';

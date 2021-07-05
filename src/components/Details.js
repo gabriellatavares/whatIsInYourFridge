@@ -1,5 +1,4 @@
 //O que falta fazer: 
-//- fix error when I refresh the detail page 
 //- CSS da página de detalhes da receita e dos favoritos
 //- footer
 
@@ -9,9 +8,13 @@ import { v4 as uuidv4 } from 'uuid'
 const Details = (props) => {
   const recipe = props.location.aboutProps;
 
+  if (recipe === undefined) {
+    window.location = '/'
+  } else {
   return (
     <>
-    {recipe.name}
+    <h3>Check out</h3>
+    <h2>{recipe.name}</h2>
     <ul>Ingredients: 
          { recipe.ingredients.map( ingredient => (
            <li key={uuidv4()}>{ingredient.text}</li>
@@ -33,6 +36,7 @@ const Details = (props) => {
     </>
     
   );
+         }
 }
 
 export default Details;
