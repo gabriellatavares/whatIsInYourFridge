@@ -85,7 +85,7 @@ span {
 }
 
 .imgRecipes {
-  width:  50%;
+  width:  70%;
 	object-fit: cover;
   border-radius: 5%;
 }
@@ -97,3 +97,71 @@ h4 {
 h4:hover {
   color: #F54748;
 }
+
+
+
+@media only screen and (max-width: 650px) {
+  .detailsPage{
+    flex-direction: column;
+  }
+}
+
+.detailsPage {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.detailsPage h2 {
+  color: #F54748;
+  font-size: 5vh;
+  margin-top: 0px;
+}
+
+.detailsPage h3 {
+  color: #2f1808;
+  font-size: 4vh;
+}
+
+.detailsImg {
+  display: inline-grid;
+  padding-top: 100px;
+  place-items: center;
+}
+
+
+.myButton {
+	box-shadow:inset 0px -1px 0px -4px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #f54747 100%);
+	background-color:#f24537;
+	border-radius:8px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff4f4;
+	font-size:18px;
+	font-weight:bold;
+	padding:11px 16px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f54747 5%, #f24537 100%);
+	background-color:#f54747;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.linkRecipe {
+  color: #2f1808;
+}
+.linkRecipe:hover {
+  color: #f54747;
+}
+
+.linkRecipe:visited {
+  color: #707070;
+}
+
+        

@@ -15,7 +15,7 @@ const AddFavorite = (props) => {
   })
   return (
     <div>
-      <button onClick={() => {
+      <a href="#" className="myButton" onClick={() => {
         let inThere = false;
         for(var ele of favorite){
           if (ele.name === props.name){
@@ -24,6 +24,7 @@ const AddFavorite = (props) => {
           }
         }
         if (inThere === false){
+          alert('Recipe added to favorites!')
           setFav ([
             {
               name: props.name,
@@ -38,7 +39,7 @@ const AddFavorite = (props) => {
         
       }}>
         Add to favorites!
-      </button>
+      </a>
     </div>
   )
 }
