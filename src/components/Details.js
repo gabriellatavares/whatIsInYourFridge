@@ -1,8 +1,8 @@
 //O que falta fazer: 
 //- CSS da página dos favoritos
-//- footer
+//- mostrar mensagem se o search for bem realizado ou não
 
-import React, {useState} from 'react';
+import React from 'react';
 import AddFavorite from './AddFavorite'
 import { v4 as uuidv4 } from 'uuid'
        
@@ -11,7 +11,7 @@ const Details = (props) => {
   
 
   if (recipe === undefined) {
-    window.location = '/favs'
+    window.location = '/'
   } else {
   return (
     <div className="detailsPage">

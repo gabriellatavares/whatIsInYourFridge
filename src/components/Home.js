@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Recipe from './Recipe';
+import Footer from './Footer';
 import { v4 as uuidv4 } from 'uuid'
 import image from '../images/burgundy-20.png'
 import '../App.css';
@@ -20,6 +21,7 @@ function Home() {
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
+
     setRecipes(data.hits);
     console.log(recipes)
   }
@@ -32,8 +34,11 @@ function Home() {
     setQuery(search);
     setSearch('');
   }
+
+
  
   return (
+    <>
     <div className="App">
       <div className="landingPage">
         <div>
@@ -46,7 +51,7 @@ function Home() {
        <input className="search-bar" type="text" value={search} placeholder="What's in your fridge?" onChange={updateSearch}/>
        <button className="search-button" type="submit"> Search </button>
      </form>
-    <div className="recipes">
+      <div className="recipes">
       {recipes.map(recipe => (
         <Recipe
             key={uuidv4()} 
@@ -58,8 +63,10 @@ function Home() {
             sourceRecipe={recipe.recipe.url}
         />
       ))}
-      </div>
+      </div>      
     </div>
+    <Footer />
+    </>
   );
 }
 

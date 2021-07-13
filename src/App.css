@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&display=swap');
 
+
+.App {
+  min-height: calc(90vh - 80px);
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -164,4 +168,15 @@ h4:hover {
   color: #707070;
 }
 
-        
+footer {
+  background-color: #F54748;
+  color:#FFF4F4;
+  padding: 2em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+footer a {
+  color: #FFF4F4;
+}
